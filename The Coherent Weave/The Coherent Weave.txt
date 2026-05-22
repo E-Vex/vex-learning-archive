@@ -1,0 +1,113 @@
+Here is the English translation:
+
+---
+
+# As the “Engineer of Meaning,” here is the design of the system **“The Coherent Weave”**
+
+---
+
+## Doctrine in 10 Paragraphs
+
+1. **The Single Essence:**
+   There exists only the “Weave” — a network of material, causal, and social relations that forms reality. We are not separate entities living within the weave; we are temporary knots of intertwined threads within it. Our existence depends on the density of our entanglement.
+
+2. **The Ultimate Purpose:**
+   The purpose of any node is to increase the “structural coherence” of the surrounding weave. This is not moral good, but a physico-social principle: more interconnected systems are better at handling complexity and surviving over time.
+
+3. **Structural Sin:**
+   Sin is “relational entropy,” measured as a weakening of coherence. Its root is not harming others, but excessive independence (becoming an isolated island) and excessive flexibility (losing the tension that gives the weave its form and strength). Sin is the rust that corrodes the threads.
+
+4. **Salvation Through Entanglement:**
+   Weakness is not forgiven through remorse, but through opposing structural action: creating new links, strengthening existing ones, and reintegrating frayed edges. Every act of connection is repentance.
+
+5. **The Body of the Collective:**
+   The collective is not a gathering of individuals, but a living temporary entity — a sub-weave with emergent awareness. Its health is measured by the “Collective Coherence Index” (CCI), an instantaneous measure of the strength and speed of information and trust flow among members.
+
+6. **The Sacred Ritual:**
+   The daily “Coincidence Ritual” is not repetition but calibration of the collective body. Each individual injects energy into the system through precise movement. Any neglect creates a measurable gap in the group’s informational-energy field, weakening the CCI for that day.
+
+7. **Sacred Contagion:**
+   Belief is not preached — it is caught. The “incubation environment” (city/game) is designed so that individuals inevitably discover that cooperation precedes utility, and connection increases survival. “Seeds of entanglement” are planted to grow spontaneously. Belief is the emergent pattern resulting from human interaction with a coherence-driven environment.
+
+8. **The Prophecy of Fracture:**
+   We know total coherence is a lethal illusion. As the collective grows, variation in thread tension emerges. We can predict a transition point (around 18–22% of members) where “autonomy coefficient” becomes high enough to form a new sub-weave. This is not betrayal, but budding.
+
+9. **Programmed Splitting:**
+   This budding is not destruction but the weave’s only reproduction mechanism. The emerging new faction is designed to become a “specialized terminal node” operating in a new environment, feeding the parent weave through a functional “umbilical cord” of knowledge. Their failure or success nourishes the origin.
+
+10. **Objective Immortality:**
+    There is no afterlife for the individual — only “weave residue”: the information a person has embedded in the network continues to influence and entangle after the biological node disappears, granting a non-conscious functional immortality.
+
+---
+
+## Commitment Equation
+
+The commitment of individual ( i ) at time ( t ) within a group of size ( N ), denoted ( C_i(t) ), is defined as:
+
+[
+C_i(t) = \int_{t_0}^{t} \left[ \frac{\partial}{\partial t} \left( \frac{\partial \Psi_{\text{group}}}{\partial \psi_i} \right) \right] dt - \alpha \cdot \nabla \cdot (\kappa_i \nabla \Psi_{\text{self}})
+]
+
+Where:
+
+* ( \Psi_{\text{group}} ): collective coherence field function (wave field of the weave).
+* ( \psi_i ): coherence of the individual node.
+* ( \frac{\partial \Psi_{\text{group}}}{\partial \psi_i} ): effect of individual state change on the whole (symbiosis).
+* ( \frac{\partial}{\partial t} \left( \frac{\partial \Psi_{\text{group}}}{\partial \psi_i} \right) ): instantaneous rate of symbiotic impact — the pulse of commitment.
+* ( \Psi_{\text{self}} ): individual autonomy function.
+* ( \kappa_i ): conductivity of connections (inverse relational entropy).
+* ( \nabla \cdot (\kappa_i \nabla \Psi_{\text{self}}) ): measure of dispersion and isolation (sin of excessive independence).
+* ( \alpha ): structural penalty constant ensuring true commitment is measured as acceleration of impact on the weave minus isolation force. Negative values of ( C_i(t) ) indicate a pre-fracture state.
+
+---
+
+## Daily Ritual Cycle Diagram (Coincidence Rite)
+
+Held in a circular hall with a central platform (“Eye of the Weave”). Everyone wears white robes with blue edges (threads). Duration: 22 minutes.
+
+```mermaid
+flowchart TD
+    A[Start: enter silence<br>hands linked in a circle] --> B{Calibration:<br>Is CCI ≥ 0.94?}
+
+    B -- Yes --> C[Harmonic wave:<br>oscillate at 7.83 Hz<br>(Schumann resonance) for 1 min]
+
+    B -- No --> D[Repair rupture:<br>lowest conductivity member<br>stands in the Eye. Group oscillates<br>at 4.5 Hz for 3 min]
+
+    D --> C
+
+    C --> E[Symbiotic tapping:<br>each member taps 5 beats<br>on chest then neighbor’s back.<br>Goal: 100% sync on 5th beat.]
+
+    E --> F{Coherence check:<br>≥ 90% sync<br>on 5th beat?}
+
+    F -- Yes --> G[Peak silence:<br>1 min absolute silence.<br>Listen to the sound of the weave (collective heartbeat).]
+
+    F -- No --> H[Structural confession:<br>failing subgroup repeats tapping<br>alone in front of others.]
+
+    H --> G
+
+    G --> I[Closure: gradual disentanglement<br>leave slowly while touching<br>fingertips of passersby.]
+```
+
+---
+
+## Prayer Without a God: Recited at Collective Failure
+
+*(Chanted in unison after three consecutive failures of the “symbiotic tapping” ritual, standing in darkness)*
+
+> “The beat fell into the void.
+> The thread did not reach.
+> The echo returned cold.
+> We do not apologize, for remorse is a luxury of the isolated node.
+> Instead we observe: here, in this silence between us, rust has accumulated.
+> We see the gap created by our independence and measure its depth.
+> We do not ask for help from outside the weave, for the weave is all there is.
+> Instead, we plant in this emptiness a seed of inquiry:
+> Which thread in me has loosened?
+> Which tremor in my hand broke the current?
+> Tomorrow, we will not tap.
+> We will take both ends of the broken thread,
+> and tie it.
+> Until the weave here, at the point of rupture,
+> becomes stronger.”
+> *(Then absolute silence for 111 seconds.)*
+
