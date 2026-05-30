@@ -62,6 +62,7 @@ int main()
 // Source IP: 192.168.0.1
 // Destination IP: 192.168.0.2
 
-//  This code demonstrates how to parse IP addresses using bitwise operations and print them in a human-readable format. The analyze_ip function takes an IP_header structure as input and extracts the source and destination IP addresses, printing them in the standard dotted-decimal notation.
+//  This code demonstrates how to parse IP addresses using bitwise operations and print them in a human-readable format.
+// The analyze_ip function takes an IP_header structure as input and extracts the source and destination IP addresses, printing them in the standard dotted-decimal notation.
 //  It uses bitwise operations to shift and mask the IP address to get each byte, which is then printed in a human-readable format.
 //   The main function demonstrates how to set the IP addresses and call the analyze_ip function to display them.
