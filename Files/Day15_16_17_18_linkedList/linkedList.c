@@ -17,7 +17,17 @@ int_Node *node_data(int data)
 
     return node;
 }
-
+void free_list(int_Node *head)
+{
+    int_Node *copyPointer = head;
+    int_Node *currentPointer = head;
+    while (currentPointer != NULL)
+    {
+        copyPointer = currentPointer->next;
+        free(currentPointer);
+        currentPointer = copyPointer;
+    }
+}
 int main()
 {
     int_Node *head = node_data(10); // Create head node
@@ -39,6 +49,7 @@ int main()
     /*---------------------------------------------------------------------------------------*/
 
     int_Node *currentPointer = head;
+
     int i = 1;
     while (currentPointer != NULL)
     {
@@ -47,5 +58,6 @@ int main()
         i++;
     }
 
+    free_list(head);
     return 0;
 }
