@@ -17,6 +17,17 @@ int_Node *node_data(int data)
 
     return node;
 }
+void traverse_list(int_Node *head)
+{
+    int_Node *currentPointer = head;
+    int i = 1;
+    while (currentPointer != NULL)
+    {
+        printf("Node %d : %d\n", i, currentPointer->data);
+        currentPointer = currentPointer->next;
+        i++;
+    }
+}
 void free_list(int_Node *head)
 {
     int_Node *copyPointer = head;
@@ -27,6 +38,30 @@ void free_list(int_Node *head)
         free(currentPointer);
         currentPointer = copyPointer;
     }
+}
+
+int_Node *insert_at_end(int_Node *head, int newData)
+{
+    int_Node *currentPointer = head;
+    int_Node *endNode;
+    if (head == NULL)
+    {
+        head = node_data(newData);
+        return head;
+    }
+    while (1)
+    {
+        if (currentPointer->next == NULL)
+        {
+            endNode = currentPointer;
+            break;
+        }
+        currentPointer = currentPointer->next;
+    }
+    endNode->next = malloc(sizeof(int_Node));
+    endNode->next->data = newData;
+    endNode->next->next = NULL;
+    return head;
 }
 int main()
 {
@@ -47,16 +82,8 @@ int main()
     second->next = third; // Link second to third
 
     /*---------------------------------------------------------------------------------------*/
-
-    int_Node *currentPointer = head;
-
-    int i = 1;
-    while (currentPointer != NULL)
-    {
-        printf("Node %d : %d\n", i, currentPointer->data);
-        currentPointer = currentPointer->next;
-        i++;
-    }
+    head = insert_at_end(head, 40);
+    traverse_list(head);
 
     free_list(head);
     return 0;
