@@ -1,44 +1,55 @@
-# 📈 Daily Programming Documentation
+------
 
-Welcome to my personal programming documentation repository.
+# 📚 Programming Knowledge Archive
 
-This project is a structured log where I record everything I learn in programming on a daily basis. It serves as both a learning journal and a reference for future revision.
+This repository serves as a structured archive of my programming journey, focusing primarily on C programming, algorithms, problem-solving techniques, and software fundamentals.
 
-## Purpose
+Each documented topic includes:
 
-The main goal of this repository is to track my progress in programming consistently. Every concept, exercise, bug fix, and experiment I work on is documented here.
+- Source code implementations
+- Function explanations
+- Algorithm breakdowns
+- PDF notes and handwritten documentation
+- Design and implementation details
+- Problem-solving approaches
 
-## What I Document
+## Contents
 
-- Daily programming practice
-- New concepts I learn
-- Code snippets and examples
-- Problem-solving steps
-- Errors and how I fix them
-- Small projects and experiments
-- Notes on programming languages (especially C/C++)
+### 🔹 C Programming
 
-## Structure
+- Functions
+- Pointers
+- Arrays
+- Structures
+- Memory Management
+- File Handling
+- Bitwise Operations
 
-Each day has its own file or section, labeled with the date, for example:
+### 🔹 Algorithms & Problem Solving
 
-- 2026-05-22.md
-- 2026-05-23.md
+- Searching Algorithms
+- Sorting Algorithms
+- Mathematical Algorithms
+- Logic Exercises
 
-Inside each file, I write everything I learned or practiced on that day.
+### 🔹 Documentation
+
+Every implementation is accompanied by detailed documentation explaining:
+
+- The objective of the code
+- How the algorithm works
+- Design decisions
+- Complexity analysis (when applicable)
+- Personal notes and observations
 
 ## Goals
 
-- Build strong programming foundations
-- Improve consistency and discipline
-- Track long-term progress
-- Create a personal knowledge base
-- Become proficient in software development and cybersecurity
+- Build strong Computer Science foundations
+- Create a personal programming knowledge base
+- Track long-term learning progress
+- Develop problem-solving skills
+- Prepare for future specialization in Cybersecurity and Artificial Intelligence
 
-## Notes
+## Philosophy
 
-This is a continuous learning journey. Even small progress matters, and everything documented here represents a step forward.
-
----
-
-**Daily Programming Journal**
+Learning is most effective when knowledge is documented, explained, and revisited. This repository is my growing archive of concepts, implementations, and lessons learned throughout my programming journey.
