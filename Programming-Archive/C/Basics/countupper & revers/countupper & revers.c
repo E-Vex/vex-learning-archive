@@ -36,6 +36,8 @@ void reverse(char *str)
 
 int main()
 {
+
+//example on
     char str[] = "HELLO";
 
     reverse(str);
