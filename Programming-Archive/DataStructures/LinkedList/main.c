@@ -40,28 +40,23 @@ void free_list(int_Node *head)
     }
 }
 
-int_Node *insert_at_end(int_Node *head, int newData)
+void insert_at_end(int_Node **headRef, int newData)
 {
-    int_Node *currentPointer = head;
-    int_Node *endNode;
-    if (head == NULL)
+    int_Node **currentPointer = headRef;
+    if (*headRef == NULL)
     {
-        head = node_data(newData);
-        return head;
+        *headRef = node_data(newData);
+        return;
     }
     while (1)
     {
-        if (currentPointer->next == NULL)
+        if ((*currentPointer)->next == NULL)
         {
-            endNode = currentPointer;
+            (*currentPointer)->next = node_data(newData);
             break;
         }
-        currentPointer = currentPointer->next;
+        currentPointer = &((*currentPointer)->next);
     }
-    endNode->next = malloc(sizeof(int_Node));
-    endNode->next->data = newData;
-    endNode->next->next = NULL;
-    return head;
 }
 int main()
 {
