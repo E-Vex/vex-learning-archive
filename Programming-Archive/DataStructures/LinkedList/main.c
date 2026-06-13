@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct int_Node
 {
@@ -58,28 +59,60 @@ void insert_at_end(int_Node **headRef, int newData)
         currentPointer = &((*currentPointer)->next);
     }
 }
+
+void print_list(int_Node *headRef)
+{
+    int_Node *currentPointer = headRef;
+    printf("--------------------Data--------------------\n");
+    while (currentPointer != NULL)
+    {
+
+        printf("%d\n", currentPointer->data);
+        currentPointer = currentPointer->next;
+    }
+    printf("NULL\n");
+}
+
+FILE *import_file(char filename[15])
+{
+    FILE *filePointer = fopen(filename, "r");
+    if (filePointer == NULL)
+    {
+        printf("Failed to open the file\n <NULL>");
+
+        return;
+    }
+    return filePointer;
+}
+
+void read_file(FILE *filePointer, int_Node **headRef)
+{
+    int num;
+    while (fscanf(filePointer, "%d", &num) != EOF)
+    {
+
+        insert_at_end(headRef, num);
+    }
+}
+
 int main()
 {
-    int_Node *head = node_data(10); // Create head node
-    // head->data = 10;
-    // head->next = NULL;
 
-    int_Node *second = node_data(20); // Create second node
-    // second->data = 20;
-    // second->next = NULL;
+    printf("Enter the file name you want to display: ");
+    char file_name[15];
+    scanf("%s", file_name);
+    if (sizeof(file_name) > 15)
+    {
+        printf("Input Error <try using a shorter name>\n");
+        return 0;
+    }
 
-    head->next = second; // Link head to second
-
-    int_Node *third = node_data(30); // Create third nodes
-    // third->data = 30;
-    // third->next = NULL;
-
-    second->next = third; // Link second to third
-
-    /*---------------------------------------------------------------------------------------*/
-    head = insert_at_end(head, 40);
-    traverse_list(head);
-
+    int_Node *head = NULL;
+    FILE *filePointer = import_file(file_name);
+    read_file(filePointer, &head);
+    print_list(head);
+    fclose(filePointer);
     free_list(head);
+
     return 0;
 }
