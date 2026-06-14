@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
 typedef struct int_Node
 {
@@ -13,8 +14,16 @@ int_Node *node_data(int data)
 {
 
     int_Node *node = malloc(sizeof(int_Node));
-    node->data = data;
-    node->next = NULL;
+    if (node == NULL)
+    {
+        printf("Error: out of memory\n");
+        exit(1);
+    }
+    else
+    {
+        node->data = data;
+        node->next = NULL;
+    }
 
     return node;
 }
@@ -78,9 +87,9 @@ FILE *import_file(char filename[15])
     FILE *filePointer = fopen(filename, "r");
     if (filePointer == NULL)
     {
-        printf("Failed to open the file\n <NULL>");
+        printf("Failed to open the file <NULL>\n");
 
-        return;
+        return NULL;
     }
     return filePointer;
 }
@@ -88,10 +97,20 @@ FILE *import_file(char filename[15])
 void read_file(FILE *filePointer, int_Node **headRef)
 {
     int num;
-    while (fscanf(filePointer, "%d", &num) != EOF)
+    int result;
+    while ((result = fscanf(filePointer, "%d", &num)) != EOF)
     {
 
-        insert_at_end(headRef, num);
+        if (result == 1)
+        {
+            insert_at_end(headRef, num);
+        }
+        else if (result == 0)
+        {
+            printf("\n               the operation stoped!\n");
+            printf("The file is contains texts between the numbers\n\n");
+            break;
+        }
     }
 }
 
@@ -99,9 +118,9 @@ int main()
 {
 
     printf("Enter the file name you want to display: ");
-    char file_name[15];
-    scanf("%s", file_name);
-    if (sizeof(file_name) > 15)
+    char file_name[16];
+    scanf("%15s", file_name);
+    if (strlen(file_name) > 14)
     {
         printf("Input Error <try using a shorter name>\n");
         return 0;
@@ -109,10 +128,18 @@ int main()
 
     int_Node *head = NULL;
     FILE *filePointer = import_file(file_name);
-    read_file(filePointer, &head);
-    print_list(head);
-    fclose(filePointer);
-    free_list(head);
+    if (filePointer != NULL)
+    {
+        read_file(filePointer, &head);
+        print_list(head);
+        fclose(filePointer);
+        free_list(head);
+    }
+    else
+    {
+        printf("can't open the file : %s\n", file_name);
+        printf("file not found\n");
+    }
 
     return 0;
 }
