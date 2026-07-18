@@ -1,22 +1,18 @@
-------
+# Programming Knowledge Archive
 
-# 📚 Programming Knowledge Archive
+This repo is an archive of my programming journey, mostly consisting of C, algorithms, problem-solving, and software fundamentals in general.
 
-This repository serves as a structured archive of my programming journey, focusing primarily on C programming, algorithms, problem-solving techniques, and software fundamentals.
-
-Each documented topic includes:
-
-- Source code implementations
-- Function explanations
-- Algorithm breakdowns
-- PDF notes and handwritten documentation
+Each topic is documented with:
+- The code itself
+- Explanations of the functions
+- Algorithm analysis
+- PDF notes or sometimes handwritten notes
 - Design and implementation details
-- Problem-solving approaches
+- My approach to solving the problem
 
 ## Contents
 
-### 🔹 C Programming
-
+### C Programming
 - Functions
 - Pointers
 - Arrays
@@ -25,31 +21,24 @@ Each documented topic includes:
 - File Handling
 - Bitwise Operations
 
-### 🔹 Algorithms & Problem Solving
-
+### Algorithms & Problem Solving
 - Searching Algorithms
 - Sorting Algorithms
 - Mathematical Algorithms
-- Logic Exercises
+- Logical exercises
 
-### 🔹 Documentation
-
-Every implementation is accompanied by detailed documentation explaining:
-
-- The objective of the code
+### Documentation
+Every implementation includes an explanation of:
+- What the code does
 - How the algorithm works
-- Design decisions
-- Complexity analysis (when applicable)
-- Personal notes and observations
+- Why I chose this particular approach
+- Complexity analysis where applicable
+- My personal notes
 
-## Goals
+## Why I Created This Repo
 
-- Build strong Computer Science foundations
-- Create a personal programming knowledge base
-- Track long-term learning progress
-- Develop problem-solving skills
-- Prepare for future specialization in Cybersecurity and Artificial Intelligence
+Honestly, I want to build a strong foundation in CS and keep everything I learn in one place instead of letting it get lost. I also want to track my progress over time and improve my problem-solving skills, especially since I plan to specialize later in Cybersecurity and AI.
 
-## Philosophy
+## My Documentation Philosophy
 
-Learning is most effective when knowledge is documented, explained, and revisited. This repository is my growing archive of concepts, implementations, and lessons learned throughout my programming journey.
+When you document something and explain it, you understand it much better than just writing the code and being done with it. So this repo has become a place I return to whenever I need to review a concept or see how I thought about it the first time.
