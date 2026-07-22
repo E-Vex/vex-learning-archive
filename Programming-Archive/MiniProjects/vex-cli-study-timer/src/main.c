@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         {
             is_session_timer = 1;
         }
-        else if (strcmp(argv[i], "-s") == 0)
+        else if (strcmp(argv[i], "-b") == 0)
         {
             is_break_timer = 1;
         }
