@@ -19,7 +19,7 @@ int is_int(char *str)
     return 1;
 }
 
-int input_handler(int argc, char *argv[], timer_config_t *timer_config)
+int parse_timer_args(int argc, char *argv[], timer_config_t *timer_config)
 {
 
     if (argc != 7)

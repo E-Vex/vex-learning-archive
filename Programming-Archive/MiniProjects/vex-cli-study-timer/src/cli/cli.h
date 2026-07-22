@@ -9,6 +9,6 @@
 #include "../timer/timer.h"
 
 int is_int(char *str);
-int input_handler(int argc, char *argv[], timer_config_t *timer_config);
+int parse_timer_args(int argc, char *argv[], timer_config_t *timer_config);
 
 #endif
