@@ -8,17 +8,17 @@ int main(int argc, char *argv[])
     int is_session_timer = 0;
     int is_break_timer = 0;
 
-    for (int i = 1; i < argv; i++)
+    for (int i = 1; i < argc; i++)
     {
-        if (strcmp(*argv, "-s") == 0)
+        if (strcmp(argv[i], "-s") == 0)
         {
             is_session = 1;
         }
-        else if (strcmp(*argv, "-t"))
+        else if (strcmp(argv[i], "-t") == 0)
         {
             is_session_timer = 1;
         }
-        else if (strcmp(*argv, "-s" == 0))
+        else if (strcmp(argv[i], "-s") == 0)
         {
             is_break_timer = 1;
         }
