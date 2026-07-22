@@ -5,3 +5,8 @@ A small C project I made to actually understand Endianness instead of just readi
 It checks whether your device stores data as Little Endian or Big Endian.
 
 I take the number `0x01020304`, read only the first byte using a pointer. If it's `0x04`, the device is Little Endian, otherwise it's Big Endian.
+
+## Run it
+
+    gcc endian_checker.c -o endian_checker
+    ./endian_checker
