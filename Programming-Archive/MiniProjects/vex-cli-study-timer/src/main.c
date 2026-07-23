@@ -9,7 +9,16 @@ int main(int argc, char *argv[])
 {
     timer_config_t timer_config = {0};
 
-    input_handler(argc, argv, &timer_config);
+    int parse_result = parse_timer_args(argc, argv, &timer_config);
+
+    if (parse_result == 1)
+    {
+        /*run the timer*/
+    }
+    else
+    {
+        /*run the error handler*/
+    }
 
     return 0;
 }

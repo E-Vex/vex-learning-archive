@@ -5,6 +5,12 @@
 #include <stdlib.h>
 #include "../timer/timer.h"
 
+#define FLAGS_ERROR 0
+#define SESSION_ERROR 2
+#define SESSION_TIME_ERROR 3
+#define BREAK_TIME_ERROR 4
+#define ARGC_ERROR 5
+
 int is_int(char *str)
 {
     if (*str == '+' && *(str + 1) != '\0')
@@ -26,7 +32,7 @@ int parse_timer_args(int argc, char *argv[], timer_config_t *timer_config)
     {
         fprintf(stderr, "E: The vex-timer command requires exactly 6 arguments.\n");
         fprintf(stderr, "Usage: vex-timer -s <session> -t <session_time> -b <break-time>\n");
-        exit(EXIT_FAILURE);
+        return ARGC_ERROR;
     }
 
     for (int i = 1; i < argc; i++)
@@ -40,8 +46,8 @@ int parse_timer_args(int argc, char *argv[], timer_config_t *timer_config)
             }
             else
             {
-                printf("E: The session value is not valid\n");
-                exit(EXIT_FAILURE);
+                fprintf(stderr, "E: The session value is not valid\n");
+                return SESSION_ERROR;
             }
         }
         else if (strcmp(argv[i], "-t") == 0)
@@ -53,8 +59,8 @@ int parse_timer_args(int argc, char *argv[], timer_config_t *timer_config)
             }
             else
             {
-                printf("E: The session time value is not valid\n");
-                exit(EXIT_FAILURE);
+                fprintf(stderr, "E: The session time value is not valid\n");
+                return SESSION_TIME_ERROR;
             }
         }
         else if (strcmp(argv[i], "-b") == 0)
@@ -66,15 +72,15 @@ int parse_timer_args(int argc, char *argv[], timer_config_t *timer_config)
             }
             else
             {
-                printf("E: The break time value is not valid\n");
-                exit(EXIT_FAILURE);
+                fprintf(stderr, "E: The break time value is not valid\n");
+                return BREAK_TIME_ERROR;
             }
         }
         else
         {
-            printf("E: flag not valid\n");
-            printf("NOTE: vex-timer -s <session> -t <session_time> -b <break-time>\n");
-            exit(EXIT_FAILURE);
+            fprintf(stderr, "E: Flag not valid\n");
+            fprintf(stderr, "Usage: vex-timer -s <session> -t <session_time> -b <break-time>\n");
+            return FLAGS_ERROR;
         }
     }
     return 1;
