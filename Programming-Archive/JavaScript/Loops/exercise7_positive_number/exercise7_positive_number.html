@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 7 - Positive Number</title>
+</head>
+<body>
+    <h2>Exercise 7 - Positive Number</h2>
+
+    <script>
+    // Exercise 7: ask for a number until the user enters a positive one
+
+    let number;
+
+    do {
+        number = Number(prompt("Enter a number"));
+    } while (number < 0);   // we repeat while the number is negative
+
+    alert(number + " is positive");
+    </script>
+</body>
+</html>
