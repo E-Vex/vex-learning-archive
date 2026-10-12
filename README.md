@@ -27,6 +27,11 @@ Each topic is documented with:
 - Mathematical Algorithms
 - Logical exercises
 
+### JavaScript Programming
+- USNF05 course exercises (conditions, input handling)
+- Loops practice (while, do...while, for)
+- Small interactive scripts with prompt / alert
+
 ### Documentation
 Every implementation includes an explanation of:
 - What the code does
