@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 6 - Sum Until 100</title>
+</head>
+<body>
+    <h2>Exercise 6 - Sum Until 100</h2>
+
+    <script>
+    // Exercise 6 (USNF05 - Series 1 - Part 2)
+    // Read values one by one, ignore the non numeric ones,
+    // add the numbers to a sum, and stop when the sum exceeds 100.
+
+    let sum = 0;
+
+    while (sum <= 100) {
+        let val = Number(prompt("Enter a number"));
+
+        if (!isNaN(val)) {
+            // only add the value if it is really a number
+            sum = sum + val;
+        }
+        // if it is not a number we just ignore it and ask again
+    }
+
+    alert("Sum = " + sum);
+    </script>
+</body>
+</html>
