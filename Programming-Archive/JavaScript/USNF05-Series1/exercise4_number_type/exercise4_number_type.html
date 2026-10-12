@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 4 - Number Type</title>
+</head>
+<body>
+    <h2>Exercise 4 - Number Type</h2>
+
+    <script>
+    // Exercise 4 (USNF05 - Series 1 - Part 2)
+    // Check if the user input is a number, and if yes decide
+    // if it is an integer or a real number.
+
+    let val = prompt("Enter a number");
+    let n = Number(val);
+
+    let msg;
+    if (isNaN(n)) {
+        // Number() returned NaN -> the input was not a number
+        msg = val + " is not a number";
+    }
+    else if (n == parseInt(n)) {
+        // parseInt removes the decimal part, so if the value
+        // does not change it means the number is an integer
+        msg = val + " is an integer number";
+    }
+    else {
+        msg = val + " is a real number";
+    }
+
+    alert(msg);
+    </script>
+</body>
+</html>
