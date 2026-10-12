@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 10 - Power Sum</title>
+</head>
+<body>
+    <h2>Exercise 10 - Power Sum (1^1 + 2^2 + ... + n^n)</h2>
+    <p>Open the browser console (F12) to see the result.</p>
+
+    <script>
+    // Exercise 10 (bonus): calculate 1^1 + 2^2 + 3^3 + ... + n^n
+    // for n = 5 the result is 3413
+    // (you can change the value of n to test)
+
+    let n = 5;
+    let sum = 0;
+
+    for (let i = 1; i <= n; i++) {
+        sum = sum + i ** i;   // i ** i means i to the power of i
+    }
+
+    console.log("Sum =", sum);
+    </script>
+</body>
+</html>
