@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 1 - Minor or Adult</title>
+</head>
+<body>
+    <h2>Exercise 1 - Minor or Adult</h2>
+
+    <script>
+    // Exercise 1 (USNF05 - Series 1)
+    // Ask for the user's age and display if he is a minor or an adult.
+    // A person is considered an adult if he is 18 years old or more.
+
+    let age = prompt("Enter your age");
+
+    // prompt() always returns a string, so we convert it to a number first
+    age = Number(age);
+
+    let msg;
+    if (age >= 18) {
+        msg = "Adult";
+    }
+    else {
+        msg = "Minor";
+    }
+
+    alert(msg);
+    </script>
+</body>
+</html>
