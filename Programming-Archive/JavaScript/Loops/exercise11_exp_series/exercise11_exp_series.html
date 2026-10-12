@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 11 - Exponential Series</title>
+</head>
+<body>
+    <h2>Exercise 11 - Exponential Series</h2>
+    <p>Open the browser console (F12) to see the result.</p>
+
+    <script>
+    // Exercise 11 (bonus): calculate the series
+    // 1 + x^1/1! + x^2/2! + x^3/3! + ... + x^n/n!
+    // for x = 2 and n = 4 the result is 7
+
+    let x = 2;
+    let n = 4;
+
+    let sum = 1;          // the first term (1) is already counted
+    let factorial = 1;    // factorial of i, we build it step by step
+
+    for (let i = 1; i <= n; i++) {
+        factorial = factorial * i;          // i! = (i-1)! x i
+        sum = sum + (x ** i) / factorial;   // add the term x^i / i!
+    }
+
+    console.log("Sum =", sum);
+    </script>
+</body>
+</html>
