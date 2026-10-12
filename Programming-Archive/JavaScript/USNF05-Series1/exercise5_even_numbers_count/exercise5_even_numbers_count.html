@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 5 - Even Numbers Count</title>
+</head>
+<body>
+    <h2>Exercise 5 - Even Numbers Count</h2>
+
+    <script>
+    // Exercise 5 (USNF05 - Series 1 - Part 2)
+    // Ask for an integer and count how many even numbers
+    // there are between 1 and this number.
+    // A number is even when the remainder of its division
+    // by 2 is 0 (i % 2 == 0).
+
+    let val = prompt("Enter a positive integer");
+    let n = Number(val);
+
+    if (!isNaN(n) && n == parseInt(n)) {
+        // the input is really an integer, we can count
+        let count = 0;
+        let i = 1;
+
+        while (i <= n) {
+            if (i % 2 == 0) {
+                count++;   // i is even, one more even number
+            }
+            i++;
+        }
+
+        alert("Between 1 and " + n + ", there are " + count + " even numbers");
+    }
+    else {
+        alert(val + " is not an integer number");
+    }
+    </script>
+</body>
+</html>
