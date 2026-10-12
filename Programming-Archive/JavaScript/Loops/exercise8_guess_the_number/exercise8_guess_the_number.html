@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 8 - Guess the Number</title>
+</head>
+<body>
+    <h2>Exercise 8 - Guess the Number</h2>
+
+    <script>
+    // Exercise 8: the user must find the secret number (7)
+
+    let secret = 7;
+    let guess;
+
+    do {
+        guess = Number(prompt("Guess the number"));
+    } while (guess !== secret);   // repeat until the guess is correct
+
+    alert("Correct!");
+    </script>
+</body>
+</html>
