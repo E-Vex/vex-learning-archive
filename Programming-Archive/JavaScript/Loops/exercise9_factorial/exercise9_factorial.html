@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 9 - Factorial</title>
+</head>
+<body>
+    <h2>Exercise 9 - Factorial</h2>
+
+    <script>
+    // Exercise 9 (bonus): factorial of a number
+    // n! = 1 x 2 x 3 x ... x n
+
+    let n = Number(prompt("Enter a number"));
+
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+        result = result * i;   // multiply the result by each number
+    }
+
+    alert("Factorial = " + result);
+    </script>
+</body>
+</html>
