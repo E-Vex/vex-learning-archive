@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 3 - Student Grade</title>
+</head>
+<body>
+    <h2>Exercise 3 - Student Grade</h2>
+
+    <script>
+    // Exercise 3 (USNF05 - Series 1)
+    // Ask for a student's grade and display a message:
+    // >= 14      -> Passed with honors
+    // >= 12      -> Passed with good grade
+    // >= 10      -> Passed without honors, Passable
+    // otherwise  -> Failed
+
+    let grade = Number(prompt("Enter the student grade"));
+
+    let msg;
+    if (grade >= 14) {
+        msg = "Passed with honors";
+    }
+    else if (grade >= 12) {
+        msg = "Passed with good grade";
+    }
+    else if (grade >= 10) {
+        msg = "Passed without honors, Passable";
+    }
+    else {
+        msg = "Failed";
+    }
+
+    alert(msg);
+    </script>
+</body>
+</html>
