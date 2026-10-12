@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 2 - Greeting</title>
+</head>
+<body>
+    <h2>Exercise 2 - Greeting</h2>
+
+    <script>
+    // Exercise 2 (USNF05 - Series 1)
+    // Ask for a name and a civility (Mr, Mrs, Miss) and display
+    // the right greeting message.
+
+    let name = prompt("Enter your name");
+    let cv = prompt("Enter your civility (Mr, Mrs, Miss)");
+
+    let msg;
+    if (cv == "Mr") {
+        msg = "Hello Sir, " + name;
+    }
+    else if (cv == "Mrs") {
+        msg = "Hello Madam, " + name;
+    }
+    else if (cv == "Miss") {
+        msg = "Hello Miss, " + name;
+    }
+    else {
+        msg = "Hello Sir, Madam";
+    }
+
+    alert(msg);
+    </script>
+</body>
+</html>
