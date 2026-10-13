@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 6 - Divisors and Prime</title>
+</head>
+<body>
+    <h2>Exercise 6 - Divisors and Prime</h2>
+
+    <script>
+    // Exercise 6 (USNF05 - Series 3)
+    // For each number between 4 and 15 (inclusive):
+    //   - display its divisors (1 and itself included)
+    //   - say if it is a prime number
+    //
+    // A prime number is a number divisible only by 1 and itself.
+    // So if the only divisors are 1 and the number itself, it is prime.
+    //
+    // Expected output format:
+    //   Divisors of 4: 1, 2, 4
+    //   Divisors of 5: 1, 5 (Prime)
+    //   Divisors of 6: 1, 2, 3, 6
+    //   ...
+
+    document.write("<pre>");
+
+    for (let n = 4; n <= 15; n++) {
+        let divisors = "";   // we build the list of divisors as a string
+        let count = 0;       // how many divisors we found
+
+        for (let d = 1; d <= n; d++) {
+            if (n % d == 0) {
+                // d is a divisor of n
+                if (count > 0) {
+                    divisors = divisors + ", ";   // separator before next divisor
+                }
+                divisors = divisors + d;
+                count++;
+            }
+        }
+
+        // a number is prime when it has exactly 2 divisors: 1 and itself
+        let msg = "Divisors of " + n + ": " + divisors;
+        if (count == 2) {
+            msg = msg + " (Prime)";
+        }
+        document.write(msg + "\n");
+    }
+
+    document.write("</pre>");
+    </script>
+</body>
+</html>

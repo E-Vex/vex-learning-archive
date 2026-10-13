@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 2 - Perfect Number</title>
+</head>
+<body>
+    <h2>Exercise 2 - Perfect Number</h2>
+
+    <script>
+    // Exercise 2 (USNF05 - Series 3)
+    // Ask the user for a number and check if it is a perfect number.
+    //
+    // A number is perfect when it is a non-zero positive integer AND
+    // it is equal to the sum of its divisors except itself.
+    //
+    // Example: 6
+    //   divisors of 6 except itself : 1, 2, 3
+    //   1 + 2 + 3 = 6  -> 6 is perfect
+    //
+    // Other perfect numbers: 28, 496, 8128, 33550336 ...
+
+    let val = prompt("Enter a number");
+    let n = Number(val);
+
+    // a perfect number must be a positive integer, so we check that first
+    if (isNaN(n) || n != parseInt(n) || n <= 0) {
+        alert(val + " is not a positive integer, so it cannot be perfect");
+    }
+    else {
+        // we look for every divisor of n except itself
+        // a divisor of n is a number i such that n % i == 0
+        // we go from 1 to n/2 because no divisor (except n itself)
+        // can be bigger than n/2
+        let sum = 0;
+        let i = 1;
+        while (i <= n / 2) {
+            if (n % i == 0) {
+                sum = sum + i;   // i is a divisor of n (other than n)
+            }
+            i++;
+        }
+
+        // n is perfect if the sum of those divisors is equal to n
+        if (sum == n) {
+            alert(n + " is a perfect number");
+        }
+        else {
+            alert(n + " is not a perfect number");
+        }
+    }
+    </script>
+</body>
+</html>

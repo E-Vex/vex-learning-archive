@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 5 - Guess the Number</title>
+</head>
+<body>
+    <h2>Exercise 5 - Guess the Number</h2>
+
+    <script>
+    // Exercise 5 (USNF05 - Series 3)
+    // The computer picks a random number between 1 and 100.
+    // The user tries to guess it.
+    // After each guess the program says "it's less" or "it's more".
+    // The user can abandon by typing "q" (or anything that is not a number,
+    // or by pressing Cancel on the prompt).
+    // When the number is found, display "Bravo!!" and the number of attempts.
+
+    // Math.random() returns a number in [0, 1[
+    // x 100 gives [0, 100[, Math.floor gives an integer 0..99, +1 gives 1..100
+    let secret = Math.floor((Math.random() * 100) + 1);
+
+    let attempts = 0;     // how many valid tries the user made
+    let found = false;    // becomes true when the user finds the number
+    let abandoned = false; // becomes true if the user gives up
+
+    while (!found && !abandoned) {
+        let input = prompt("Guess the number (between 1 and 100).\n" +
+                           "Enter 'q' to abandon.");
+
+        // user pressed Cancel or closed the dialog -> we treat as abandon
+        if (input === null) {
+            abandoned = true;
+            break;
+        }
+
+        // user typed q (or Q) to give up
+        if (input === "q" || input === "Q") {
+            abandoned = true;
+            break;
+        }
+
+        let guess = Number(input);
+
+        // if the input is not a number we tell the user and ask again,
+        // we do not count this as a real attempt
+        if (isNaN(guess)) {
+            alert("That is not a number, try again.");
+            continue;
+        }
+
+        attempts++;   // this one counts as a real attempt
+
+        if (guess == secret) {
+            found = true;
+        }
+        else if (guess > secret) {
+            alert("it's less");
+        }
+        else {
+            alert("it's more");
+        }
+    }
+
+    if (found) {
+        alert("Bravo!!\n" +
+              "The number was " + secret + "\n" +
+              "You found it in " + attempts + " attempt" +
+              (attempts > 1 ? "s" : "") + ".");
+    }
+    else {
+        alert("You abandoned.\n" +
+              "The number was " + secret + ".");
+    }
+    </script>
+</body>
+</html>

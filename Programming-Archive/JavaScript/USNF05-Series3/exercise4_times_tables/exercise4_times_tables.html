@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 4 - Times Tables 1 to 9</title>
+</head>
+<body>
+    <h2>Exercise 4 - Times Tables 1 to 9</h2>
+
+    <script>
+    // Exercise 4 (USNF05 - Series 3)
+    // Display the multiplication table from 1 to 9.
+    //
+    // It is a 9x9 grid where the cell at row i, column j contains i * j.
+    //
+    //   i \ j | 1   2   3   4   5   6   7   8   9
+    //   ------+----------------------------------
+    //     1   | 1   2   3   4   5   6   7   8   9
+    //     2   | 2   4   6   8  10  12  14  16  18
+    //     3   | 3   6   9  12  15  18  21  24  27
+    //     ...
+    //     9   | 9  18  27  36  45  54  63  72  81
+    //
+    // We use a fixed width of 4 characters per cell so the columns
+    // stay aligned even when the numbers have 1 or 2 digits.
+
+    document.write("<pre>");
+
+    // header row: empty corner cell then the column numbers 1..9
+    let header = "    ";
+    for (let j = 1; j <= 9; j++) {
+        header = header + j + "   ";
+    }
+    document.write(header + "\n");
+
+    // separator line under the header
+    let sep = "    ";
+    for (let j = 1; j <= 9; j++) {
+        sep = sep + "----";
+    }
+    document.write(sep + "\n");
+
+    // one row of the table per value of i
+    for (let i = 1; i <= 9; i++) {
+        let row = " " + i + " |";   // row header (number then a separator)
+        for (let j = 1; j <= 9; j++) {
+            let product = i * j;
+            // padStart(4) makes the product take 4 characters
+            // so the columns stay aligned whatever the number of digits
+            row = row + " " + String(product).padStart(3, " ");
+        }
+        document.write(row + "\n");
+    }
+
+    document.write("</pre>");
+    </script>
+</body>
+</html>

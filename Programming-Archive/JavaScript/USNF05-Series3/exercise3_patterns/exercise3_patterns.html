@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 3 - Patterns</title>
+</head>
+<body>
+    <h2>Exercise 3 - Patterns</h2>
+
+    <script>
+    // Exercise 3 (USNF05 - Series 3)
+    //
+    // a) Display Figure 1: a right-angled triangle of numbers, 8 rows.
+    //    Row i contains the numbers 1 2 3 ... i separated by spaces.
+    //
+    //    1
+    //    1 2
+    //    1 2 3
+    //    1 2 3 4
+    //    1 2 3 4 5
+    //    1 2 3 4 5 6
+    //    1 2 3 4 5 6 7
+    //    1 2 3 4 5 6 7 8
+    //
+    // b) Modify the code to display Figure 2: the same 8 rows, but each
+    //    row only prints its last number, shifted (i-1) spaces to the right
+    //    so the numbers form a diagonal line going down-right.
+    //
+    //    1
+    //     2
+    //      3
+    //       4
+    //        5
+    //         6
+    //          7
+    //           8
+
+    // <pre> keeps the spaces and newlines visible, otherwise the browser
+    // would collapse them and the pattern would not look right
+    document.write("<pre>");
+
+    // ---- Figure 1 ----
+    document.write("Figure 1:\n");
+    for (let i = 1; i <= 8; i++) {
+        let line = "";
+        for (let j = 1; j <= i; j++) {
+            line = line + j + " ";   // append j then a space
+        }
+        document.write(line + "\n"); // print the row, then a newline
+    }
+
+    document.write("\n");
+
+    // ---- Figure 2 ----
+    // Same outer loop, but instead of printing 1..i we just print i
+    // after (i-1) spaces so each number is shifted one more to the right.
+    document.write("Figure 2:\n");
+    for (let i = 1; i <= 8; i++) {
+        let line = "";
+        for (let s = 1; s < i; s++) {
+            line = line + " ";        // add (i-1) leading spaces
+        }
+        line = line + i;              // then the number itself
+        document.write(line + "\n");
+    }
+
+    document.write("</pre>");
+    </script>
+</body>
+</html>
